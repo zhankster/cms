@@ -24,7 +24,10 @@ try {
 
 function select_table($select_table_sql) {
     global $pdo;
-    $table = "<table id='example' border='1' class='bwp-table'><tr class='bwp-row-header'>";
+    $id = 0;
+    $id_found = false;
+    $table = "<table id='example' border='1' class='bwp-table display'>
+    <thead><tr class='bwp-row-header'>";
 
     $rs = $pdo->query($select_table_sql." LIMIT 0");
     for ($i = 0; $i < $rs->columnCount(); $i++) {
@@ -33,12 +36,22 @@ function select_table($select_table_sql) {
         $table .= "<th>".$col['name']."</th>";
     }
 
-    $table .= "<tbody class='bwp-tbody'>";
+    foreach ($columns as $value){
+        if ($value === "id"){
+            $id_found = true;
+        }
+    }
+
+    $table .= "</thead>
+    <tbody class='bwp-tbody'>";
 
     $stmt = $pdo->query($select_table_sql);
     while ($row = $stmt->fetch())
     {
-        $table .= "<tr class='bwp-row-body'>";
+        if($id_found) {
+            $id = $row['id'];
+        }
+        $table .= "<tr class='bwp-row-body' id='".$id."'>";
         foreach ($row as $value){
             $table .= "<td>$value</td>";
         }
@@ -99,8 +112,8 @@ function insert_users(){
 
 //select_test();
 //select_parm('Injection');
-$output = select_table("select * from users");
-echo $output."Test";
+// $output = select_table("select * from users");
+// echo $output."Test";
 //select_class('Users');
 //select_array()
 //insert_users();

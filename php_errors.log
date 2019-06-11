@@ -1,1 +1,60 @@
 [10-Jun-2019 19:21:55 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Dev\php\cms\php\template.php on line 131
+[11-Jun-2019 02:46:00 UTC] PHP Parse error:  syntax error, unexpected 'print_header' (T_STRING) in C:\Dev\php\cms\cms\sql.php on line 13
+[11-Jun-2019 02:47:11 UTC] PHP Warning:  require(php/connect_db): failed to open stream: No such file or directory in C:\Dev\php\cms\cms\sql.php on line 6
+[11-Jun-2019 02:47:11 UTC] PHP Fatal error:  require(): Failed opening required 'php/connect_db' (include_path='.;C:\php\pear') in C:\Dev\php\cms\cms\sql.php on line 6
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:08:24 America/Chicago] PHP Notice:  Undefined index: i in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:10:26 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
+[10-Jun-2019 22:21:09 America/Chicago] PHP Notice:  Undefined variable: row in C:\Dev\php\cms\cms\php\connect_db.php on line 39
+[10-Jun-2019 22:21:09 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in C:\Dev\php\cms\cms\php\connect_db.php on line 39
