@@ -28,7 +28,7 @@ function select_table($select_table_sql) {
     $id_found = false;
     $table = "<table id='example' border='1' class='bwp-table display'>
     <thead><tr class='bwp-row-header'>";
-
+    try{
     $rs = $pdo->query($select_table_sql." LIMIT 0");
     for ($i = 0; $i < $rs->columnCount(); $i++) {
         $col = $rs->getColumnMeta($i);
@@ -58,13 +58,37 @@ function select_table($select_table_sql) {
         $table .= "</tr>\n\r";
     }
     $table .= "</tbody></tr></table>";
+    }catch (PDOException $e) {
+        $table = 'Error in query: ' . $e->getMessage();
+    }
+
     return $table;
 }
+
+function get_tables($element, $option_val ){
+    global $pdo;
+    $sql = "SHOW TABLES";
+    $db_tables = "";
+    
+    $statement = $pdo->prepare($sql);
+    $statement->execute();
+    $tables = $statement->fetchAll(PDO::FETCH_NUM);   
+
+    foreach($tables as $table){
+        $val = $option_val ? 'value ="'.$table[0].'"': '';
+
+        $db_tables .= "<$element $val >{$table[0]}</$element>\r";
+    }
+    return $db_tables;
+
+}
+
 
 function select_parm($dept){
     global $pdo;
     $stmt = $pdo->prepare('SELECT * FROM users WHERE dept =:dept ');
     $stmt->execute(['dept' => $dept]);
+    $tables = "";
     //$user = $stmt->fetch();
     while ($row = $stmt->fetch())
     {
@@ -117,5 +141,6 @@ function insert_users(){
 //select_class('Users');
 //select_array()
 //insert_users();
+//get_tables('option', true);
 
 ?>

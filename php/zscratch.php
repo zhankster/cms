@@ -69,6 +69,22 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 //#### Crete class
 $news = $pdo->query('SELECT * FROM news')->fetchAll(PDO::FETCH_CLASS, 'News');
 
+function get_tables($element, $option_val ){
+    global $pdo;
+    $element = "li";
+    $sql = "SHOW TABLES";
+    
+    $statement = $pdo->prepare($sql);
+    $statement->execute();
+    $tables = $statement->fetchAll(PDO::FETCH_NUM);   
+
+    foreach($tables as $table){
+        $val = $value ? 'value ="'.$table[0].'"': '';
+
+        echo "<$element $val >{$table[0]}</$element>";
+    }
+
+
 ?>
 
 

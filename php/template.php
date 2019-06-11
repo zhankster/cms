@@ -47,13 +47,13 @@ print  <<<HEADER
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">BWP CMS</div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+        <a href="index.php" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="customers.php" class="list-group-item list-group-item-action bg-light">Customers</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light bwp-test">SQL</a>
+        <a href="sql.php" class="list-group-item list-group-item-action bg-light bwp-test">SQL</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->

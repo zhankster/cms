@@ -58,3 +58,9 @@
 [10-Jun-2019 22:11:20 America/Chicago] PHP Notice:  Undefined index: n in C:\Dev\php\cms\cms\php\connect_db.php on line 44
 [10-Jun-2019 22:21:09 America/Chicago] PHP Notice:  Undefined variable: row in C:\Dev\php\cms\cms\php\connect_db.php on line 39
 [10-Jun-2019 22:21:09 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in C:\Dev\php\cms\cms\php\connect_db.php on line 39
+[11-Jun-2019 14:19:55 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'customers LIMIT 0' at line 1 in C:\Dev\php\cms\cms\php\connect_db.php:32
+Stack trace:
+#0 C:\Dev\php\cms\cms\php\connect_db.php(32): PDO->query('select * custom...')
+#1 C:\Dev\php\cms\cms\sql.php(15): select_table('select * custom...')
+#2 {main}
+  thrown in C:\Dev\php\cms\cms\php\connect_db.php on line 32

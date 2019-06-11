@@ -58,3 +58,15 @@ Stack trace:
   thrown in C:\Dev\php\pdo\php\connect_test.php on line 63
 [10-Jun-2019 18:15:50 UTC] PHP Notice:  Undefined variable: el_hide in C:\Dev\php\cms\php\template.php on line 26
 [10-Jun-2019 20:15:12 America/Chicago] PHP Notice:  Undefined variable: table_header in C:\Dev\php\cms\php\connect_db.php on line 33
+[11-Jun-2019 12:51:59 America/Chicago] PHP Notice:  Array to string conversion in C:\Dev\php\cms\cms\php\connect_db.php on line 82
+[11-Jun-2019 12:51:59 America/Chicago] PHP Notice:  Array to string conversion in C:\Dev\php\cms\cms\php\connect_db.php on line 82
+[11-Jun-2019 12:51:59 America/Chicago] PHP Notice:  Array to string conversion in C:\Dev\php\cms\cms\php\connect_db.php on line 82
+[11-Jun-2019 12:51:59 America/Chicago] PHP Notice:  Array to string conversion in C:\Dev\php\cms\cms\php\connect_db.php on line 82
+[11-Jun-2019 12:51:59 America/Chicago] PHP Notice:  Array to string conversion in C:\Dev\php\cms\cms\php\connect_db.php on line 82
+[11-Jun-2019 12:51:59 America/Chicago] PHP Notice:  Array to string conversion in C:\Dev\php\cms\cms\php\connect_db.php on line 82
+[11-Jun-2019 13:04:57 America/Chicago] PHP Notice:  Undefined variable: value in C:\Dev\php\cms\cms\php\connect_db.php on line 74
+[11-Jun-2019 13:04:57 America/Chicago] PHP Notice:  Undefined variable: value in C:\Dev\php\cms\cms\php\connect_db.php on line 74
+[11-Jun-2019 13:04:57 America/Chicago] PHP Notice:  Undefined variable: value in C:\Dev\php\cms\cms\php\connect_db.php on line 74
+[11-Jun-2019 13:04:57 America/Chicago] PHP Notice:  Undefined variable: value in C:\Dev\php\cms\cms\php\connect_db.php on line 74
+[11-Jun-2019 13:04:57 America/Chicago] PHP Notice:  Undefined variable: value in C:\Dev\php\cms\cms\php\connect_db.php on line 74
+[11-Jun-2019 13:04:57 America/Chicago] PHP Notice:  Undefined variable: value in C:\Dev\php\cms\cms\php\connect_db.php on line 74

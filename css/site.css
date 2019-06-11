@@ -1,0 +1,19 @@
+.header {
+    border: 1px solid black;
+    margin-bottom: 5px;
+}
+
+/* Textarea */
+.bwp-ta {
+    margin-top: 5px;
+    /* margin-bottom: 2px; */
+}
+
+/* .bwp-btn {
+    margin-top: 5px;
+    margin-bottom: 10px;
+} */
+
+.bwp-row-body {
+    padding: 0;
+}
