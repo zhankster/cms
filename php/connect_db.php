@@ -32,8 +32,9 @@ function select_table($select_table_sql) {
     $rs = $pdo->query($select_table_sql." LIMIT 0");
     for ($i = 0; $i < $rs->columnCount(); $i++) {
         $col = $rs->getColumnMeta($i);
-        $columns[] = $col['name'];
-        $table .= "<th>".$col['name']."</th>";
+        $columns[] = ucwords($col['name']);
+        $val_replace = str_replace( '_', ' ', $col['name']);
+        $table .= "<th>". ucwords($val_replace) ."</th>";
     }
 
     foreach ($columns as $value){

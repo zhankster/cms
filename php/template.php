@@ -5,10 +5,10 @@
 // if (isset($_GET['testuser'])){
 //     $el_hide = "";
 // }
+$active_class = "bwp-active";
 
 
-
-function print_header($css_lib)
+function print_header($css_lib, $active)
 {
 print  <<<HEADER
 <!DOCTYPE html>
@@ -32,6 +32,14 @@ print  <<<HEADER
   <!-- Jquery Datatables css -->
   <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 
+  <!--Style for active tab-->
+  <style>
+    $active{
+      background-color: darkgray;
+      font-weight: bold;
+    }
+  </style>
+
   <!-- PLACEHOLDER FOR CSS CUSTOM SCRIPTS -->
   $css_lib
 
@@ -47,13 +55,13 @@ print  <<<HEADER
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">BWP CMS</div>
       <div class="list-group list-group-flush">
-        <a href="index.php" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="customers.php" class="list-group-item list-group-item-action bg-light">Customers</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
-        <a href="sql.php" class="list-group-item list-group-item-action bg-light bwp-test">SQL</a>
+        <a href="index.php" class="list-group-item list-group-item-action bg-light bwp-index ">Dashboard</a>
+        <a href="customers.php" class="list-group-item list-group-item-action bg-light bwp-customers">Customers</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light bwp-overview">Overview</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light bwp-events">Events</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light bwp-profile">Profile</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light status">Status</a>
+        <a href="sql.php" class="list-group-item list-group-item-action bg-light bwp-test bwp-sql">SQL</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -120,10 +128,10 @@ print <<<FOOTER
   <!-- Menu Toggle Script -->
   <script>
     $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
     });
-</script>
+  </script>
 
 </body>
 

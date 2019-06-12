@@ -13,7 +13,7 @@ $table = select_table($sql);
 // $js_lib="<script>src='js/sql.js'</script>";
 
 
-print_header($css_lib);
+print_header($css_lib, '.bwp-customers');
 
 ?>
 
@@ -24,29 +24,31 @@ print_header($css_lib);
                 <form>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <label for="txtCompanyName"></label>
+      <input type="text" class="form-control" id="txtCompanyName"  name="txtCompanyName" placeholder="Company Name">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <label for="txtDescription">Description</label>
+      <input type="text" class="form-control" id="txtDescription" name="txtDescription" placeholder="Brief description of company">
     </div>
   </div>
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+<div class="form-row ">
+  <div class="form-group col-md-6">
+    <label for="txtAddress">Address Line 1</label>
+    <input type="text" class="form-control" id="txtAddress1" placeholder="1234 Main St">
   </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  <div class="form-group col-md-6">
+    <label for="txtAddress2">Address Line 2</label>
+    <input type="text" class="form-control" id="txtAddress2" name="txtAddress2" placeholder="Apartment, studio, or floor">
   </div>
+</div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
+      <label for="txtCity">City</label>
+      <input type="text" class="form-control" id="txtCity" name="txtCity">
     </div>
     <div class="form-group col-md-4">
-      <label for="inputState">State</label>
+      <label for="txtState">State or Province</label>
       <select id="inputState" class="form-control">
         <option selected>Choose...</option>
         <option>...</option>

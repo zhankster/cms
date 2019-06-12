@@ -64,3 +64,8 @@ Stack trace:
 #1 C:\Dev\php\cms\cms\sql.php(15): select_table('select * custom...')
 #2 {main}
   thrown in C:\Dev\php\cms\cms\php\connect_db.php on line 32
+[11-Jun-2019 16:55:33 America/Chicago] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function print_header(), 1 passed in C:\Dev\php\cms\cms\customers.php on line 16 and exactly 2 expected in C:\Dev\php\cms\cms\php\template.php:11
+Stack trace:
+#0 C:\Dev\php\cms\cms\customers.php(16): print_header('<link href="css...')
+#1 {main}
+  thrown in C:\Dev\php\cms\cms\php\template.php on line 11

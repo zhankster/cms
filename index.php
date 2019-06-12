@@ -19,7 +19,7 @@ $db_tables = get_tables('option', true);
 // $js_lib="<script>src='js/sql.js'</script>";
 
 
-print_header($css_lib);
+print_header($css_lib, '.bwp-index');
 
 ?>
 
