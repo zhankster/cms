@@ -69,3 +69,11 @@ Stack trace:
 #0 C:\Dev\php\cms\cms\customers.php(16): print_header('<link href="css...')
 #1 {main}
   thrown in C:\Dev\php\cms\cms\php\template.php on line 11
+[12-Jun-2019 11:34:04 America/Chicago] PHP Notice:  Undefined variable: states_provinces in C:\Dev\php\cms\cms\customers.php on line 15
+[12-Jun-2019 11:34:04 America/Chicago] PHP Fatal error:  Uncaught Error: Function name must be a string in C:\Dev\php\cms\cms\customers.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\Dev\php\cms\cms\customers.php on line 15
+[12-Jun-2019 11:34:42 America/Chicago] PHP Notice:  Only variables should be passed by reference in C:\Dev\php\cms\cms\customers.php on line 15
+[12-Jun-2019 11:34:42 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in C:\Dev\php\cms\cms\customers.php on line 18
+[12-Jun-2019 11:39:05 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in C:\Dev\php\cms\cms\customers.php on line 19

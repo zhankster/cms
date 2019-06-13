@@ -22,11 +22,16 @@ try {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-function select_table($select_table_sql) {
+if (isset($_POST["selectQuery"])) {
+    $selectQuery = $_POST["selectQuery"];
+	select_json($selectQuery);
+}
+
+function select_table($select_table_sql, $table_id) {
     global $pdo;
     $id = 0;
     $id_found = false;
-    $table = "<table id='example' border='1' class='bwp-table display'>
+    $table = "<table id='$table_id' class='bwp-table display compact cell-border'>
     <thead><tr class='bwp-row-header'>";
     try{
     $rs = $pdo->query($select_table_sql." LIMIT 0");
@@ -43,7 +48,7 @@ function select_table($select_table_sql) {
         }
     }
 
-    $table .= "</thead>
+    $table .= "</tr></thead>\n
     <tbody class='bwp-tbody'>";
 
     $stmt = $pdo->query($select_table_sql);
@@ -56,14 +61,30 @@ function select_table($select_table_sql) {
         foreach ($row as $value){
             $table .= "<td>$value</td>";
         }
-        $table .= "</tr>\n\r";
+        $table .= "</tr>\n";
     }
-    $table .= "</tbody></tr></table>";
+    $table .= "</tbody></table>";
     }catch (PDOException $e) {
         $table = 'Error in query: ' . $e->getMessage();
     }
-
+    unset($pdo); unset($stmt);
     return $table;
+}
+
+
+function select_json($select_json){
+    global $pdo;
+    $encodable = array();
+    $stmt = $pdo->prepare($select_json);
+    $stmt->execute();
+    while ($obj = $stmt->fetchObject()) {
+        //print_r($obj);
+        $encodable[] = $obj;
+    }
+    $encoded = json_encode($encodable);
+
+    echo $encoded;
+    unset($pdo); unset($stmt);
 }
 
 function get_tables($element, $option_val ){
@@ -143,5 +164,6 @@ function insert_users(){
 //select_array()
 //insert_users();
 //get_tables('option', true);
+//select_json('select * from users');
 
 ?>

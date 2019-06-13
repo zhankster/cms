@@ -70,3 +70,29 @@ Stack trace:
 [11-Jun-2019 13:04:57 America/Chicago] PHP Notice:  Undefined variable: value in C:\Dev\php\cms\cms\php\connect_db.php on line 74
 [11-Jun-2019 13:04:57 America/Chicago] PHP Notice:  Undefined variable: value in C:\Dev\php\cms\cms\php\connect_db.php on line 74
 [11-Jun-2019 13:04:57 America/Chicago] PHP Notice:  Undefined variable: value in C:\Dev\php\cms\cms\php\connect_db.php on line 74
+[12-Jun-2019 16:10:05 America/Chicago] PHP Notice:  Undefined variable: selectQuery in C:\Dev\php\cms\cms\php\connect_db.php on line 72
+[12-Jun-2019 16:10:05 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty in C:\Dev\php\cms\cms\php\connect_db.php:72
+Stack trace:
+#0 C:\Dev\php\cms\cms\php\connect_db.php(72): PDO->prepare('')
+#1 C:\Dev\php\cms\cms\php\connect_db.php(161): select_json('select * from u...')
+#2 {main}
+  thrown in C:\Dev\php\cms\cms\php\connect_db.php on line 72
+[12-Jun-2019 16:10:43 America/Chicago] PHP Notice:  Undefined variable: selectQuery in C:\Dev\php\cms\cms\php\connect_db.php on line 72
+[12-Jun-2019 16:10:43 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty in C:\Dev\php\cms\cms\php\connect_db.php:72
+Stack trace:
+#0 C:\Dev\php\cms\cms\php\connect_db.php(72): PDO->prepare('')
+#1 C:\Dev\php\cms\cms\php\connect_db.php(162): select_json('select * from u...')
+#2 {main}
+  thrown in C:\Dev\php\cms\cms\php\connect_db.php on line 72
+[12-Jun-2019 16:10:48 America/Chicago] PHP Notice:  Undefined variable: selectQuery in C:\Dev\php\cms\cms\php\connect_db.php on line 72
+[12-Jun-2019 16:10:48 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty in C:\Dev\php\cms\cms\php\connect_db.php:72
+Stack trace:
+#0 C:\Dev\php\cms\cms\php\connect_db.php(72): PDO->prepare('')
+#1 C:\Dev\php\cms\cms\php\connect_db.php(162): select_json('select * from u...')
+#2 {main}
+  thrown in C:\Dev\php\cms\cms\php\connect_db.php on line 72
+[12-Jun-2019 16:36:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\Dev\php\cms\cms\php\connect_db.php:78
+Stack trace:
+#0 C:\Dev\php\cms\cms\php\connect_db.php(7): select_json('select * from u...')
+#1 {main}
+  thrown in C:\Dev\php\cms\cms\php\connect_db.php on line 78

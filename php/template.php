@@ -30,7 +30,9 @@ print  <<<HEADER
   <link href="css/simple-sidebar.css" rel="stylesheet">
 
   <!-- Jquery Datatables css -->
-  <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+  <!-- <link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet"> -->
+
 
   <!--Style for active tab-->
   <style>
@@ -121,6 +123,7 @@ print <<<FOOTER
 
   <!-- Jquery Datatbles -->
   <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+  <script src="js/env.js"></script>
 
   <!-- PLACEHOLDER FOR JS CUSTOM SCRIPTS -->
     $js_lib

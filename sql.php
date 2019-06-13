@@ -12,7 +12,7 @@ $css_lib = '<link href="css/site.css" rel="stylesheet">
 $js_lib ="<script src='js/sql.js'></script>";
 require('php/template.php');
 require('php/connect_db.php');
-$table = select_table($sql);
+$table = select_table($sql, 'tblSql');
 $db_tables = get_tables('option', true);
 
 // $css_lib = '<link href="css/sql.css" rel="stylesheet">';
