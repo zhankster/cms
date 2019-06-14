@@ -49,3 +49,13 @@ th:first-child {
     /* Microsoft Edge */
     color: #eeeeee;
 }
+
+input.form-control {
+    color: #000000;
+    font-weight: 600;
+}
+
+select.form-control {
+    color: #000000;
+    font-weight: 600;
+}

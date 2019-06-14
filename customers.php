@@ -56,7 +56,7 @@ print_header($css_lib, '.bwp-customers');
   </div>
 <div class="form-row ">
   <div class="form-group col-md-6">
-    <label for="txtAddress">Address Line 1</label>
+    <label for="txtAddress1">Address Line 1</label>
     <input type="text" class="form-control" id="txtAddress1" placeholder="1234 Main St">
   </div>
   <div class="form-group col-md-6">
@@ -108,16 +108,16 @@ print_header($css_lib, '.bwp-customers');
       </select>
     </div>
     <div class="form-group col-md-3">
-      <label for="txtEmail">txtEmail</label>
+      <label for="txtEmail">Email</label>
       <input type="text" class="form-control" id="txtEmail" name ="txtEmail">
     </div>
   </div>
 
   <div class="form-group">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
+      <input class="form-check-input" type="checkbox" id="chkActive">
+      <label class="form-check-label" for="chkActive">
+        Active
       </label>
     </div>
   </div>

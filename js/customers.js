@@ -39,14 +39,25 @@ $(document).ready(function () {
         $.each(json, function (index, item) {
             $("#txtCompanyName").val(item.company_name);
             $("#txtDescription").val(item.description);
+            $("#txtAddress1").val(item.address1);
+            $("#txtAddress2").val(item.address2);
+            $("#selCountries").val(item.country).change();
+            $("#txtCity").val(item.city);
+            $("#selState").val(item.state).change();
+            $("#txtPostalCode").val(item.postal_code);
+            $("#txtPhone1").val(item.phone1);
+            $("#txtPhone2").val(item.phone2);
+            $("#txtFax").val(item.fax);
+            $("#txtEmail").val(item.email);
+            if (String(item.active) === "1") {
+                $('#chkActive').prop('checked', true);
+            } else {
+                $('#chkActive').prop('checked', false);
+            }
         })
 
 
-        // $.each(json, function () {
-        //     $.each(this, function (name, value) {
-        //         console.log(name + '=' + value);
-        //     });
-        // })
+
 
     });
 
