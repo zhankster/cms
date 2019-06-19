@@ -18,6 +18,7 @@ $options = [
 ];
 try {
      $pdo = new PDO($dsn, $user, $pass, $options);
+     $GLOBALS['pdo'] = $pdo;
 } catch (\PDOException $e) {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
@@ -156,6 +157,29 @@ function insert_users(){
     }
 }
 
+function update_query($sql){
+  try{
+	$con = $GLOBALS['pdo'];
+	$encodable = array();
+   }
+  catch (PDOException $e) {
+    echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+    exit;
+  }
+  	$res = $con->prepare($sql);
+    $res->execute();
+    $num_r = $res->rowCount();
+  	if ($num_r < 1) {
+        echo "No Rows updated";
+  	}
+  	else {
+    	print("Success");
+  	}
+
+    unset( $res);
+    unset( $con);
+}
+
 //select_test();
 //select_parm('Injection');
 // $output = select_table("select * from users");
@@ -165,5 +189,6 @@ function insert_users(){
 //insert_users();
 //get_tables('option', true);
 //select_json('select * from users');
+//update_query("update customers set phone2='555-555-5555'");
 
 ?>

@@ -77,3 +77,8 @@ Stack trace:
 [12-Jun-2019 11:34:42 America/Chicago] PHP Notice:  Only variables should be passed by reference in C:\Dev\php\cms\cms\customers.php on line 15
 [12-Jun-2019 11:34:42 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in C:\Dev\php\cms\cms\customers.php on line 18
 [12-Jun-2019 11:39:05 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in C:\Dev\php\cms\cms\customers.php on line 19
+[16-Jun-2019 14:38:29 America/Chicago] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function select_table(), 1 passed in C:\Dev\php\cms\cms\index.php on line 15 and exactly 2 expected in C:\Dev\php\cms\cms\php\connect_db.php:30
+Stack trace:
+#0 C:\Dev\php\cms\cms\index.php(15): select_table('select  * from ...')
+#1 {main}
+  thrown in C:\Dev\php\cms\cms\php\connect_db.php on line 30

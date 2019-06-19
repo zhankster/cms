@@ -1,0 +1,8 @@
+:root {
+    --THEME-COLOR: var(--user-theme-color, #a3e792);
+}
+
+.t-wrapper {
+    --user-theme-color: #7d31c9;
+    background: var(--THEME-COLOR);
+}

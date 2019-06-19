@@ -1,4 +1,5 @@
 var DATA_URL = "php/connect_db.php";
+var CUST_ID = "0";
 
 function getCustomer(sql) {
     var data = "NA";
@@ -25,14 +26,49 @@ function getCustomer(sql) {
 
 }
 
+function clearCustForm() {
+    $("#txtCompanyName").val("");
+    $("#txtDescription").val("");
+    $("#txtAddress1").val("");
+    $("#txtAddress2").val("");
+    $("#selCountries").val("Choose...").change();
+    $("#txtCity").val("");
+    $("#selState").val("Choose...").change();
+    $("#txtPostalCode").val("");
+    $("#txtPhone1").val("");
+    $("#txtPhone2").val("");
+    $("#txtFax").val("");
+    $("#txtEmail").val("");
+    $('#chkActive').prop('checked', true);
+    $("#custBtnSubmit").text("Add Customer");
+    $("#txtID").val("0");
+    $("#txtPostType").val("add");
+    CUST_ID = "0";
+
+    $("#custBtnSubmit").text("Add Customer");
+}
+
+function validateCustomer() {
+    $(".customer").removeClass("err");
+    if ($("#txtCompanyName").val().trim() == "") {
+        $("#txtModErr").html("A person or company must be entered");
+        $("#modErr").modal();
+        $("#txtCompanyName").addClass("err");
+        return false;
+    }
+}
+
 $(document).ready(function () {
     $('#tblCustomers').DataTable();
 
-    $("#btnSql").click(function () {
+    $("#custBtnClear").click(function () {
         //alert("btnSql");
+        //alert("ID: " + $("#txtID").val() + " Post Type:" + $("#txtPostType").val());
+        clearCustForm();
     });
 
     $(document).on("click", "#tblCustomers tr", function (e) {
+        validateCustomer();
         id = $(this).find("td:first").text();
         json = getJSON("select * from customers where id =" + id);
 
@@ -54,10 +90,12 @@ $(document).ready(function () {
             } else {
                 $('#chkActive').prop('checked', false);
             }
+            $("#txtID").val(item.id);
+            CUST_ID = item.id;
+            $("#txtPostType").val("update");
         })
 
-
-
+        $("#custBtnSubmit").text("Update Customer");
 
     });
 

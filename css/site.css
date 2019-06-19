@@ -1,3 +1,6 @@
+
+
+
 .header {
     border: 1px solid black;
     margin-bottom: 5px;
@@ -58,4 +61,9 @@ input.form-control {
 select.form-control {
     color: #000000;
     font-weight: 600;
+}
+
+.err{
+    background-color: yellow;
+    border: red 3px solid;
 }
