@@ -10,26 +10,33 @@ $charset = $GLOBALS['charset'];
 $pdo = NULL;
 
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
-try {
-     $pdo = new PDO($dsn, $user, $pass, $options);
-     $GLOBALS['pdo'] = $pdo;
-} catch (\PDOException $e) {
-     throw new \PDOException($e->getMessage(), (int)$e->getCode());
+function createConn(){
+    global $host, $db, $user, $pass, $charset;
+    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+    $options = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+    try {
+        $pdo = new PDO($dsn, $user, $pass, $options);
+    } catch (\PDOException $e) {
+        throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    }
+    return $pdo;
 }
 
-if (isset($_POST["selectQuery"])) {
-    $selectQuery = $_POST["selectQuery"];
-	select_json($selectQuery);
-}
+    $GLOBALS['pdo'] = createConn();
+
+
+    if (isset($_POST["selectQuery"])) {
+        $selectQuery = $_POST["selectQuery"];
+        select_json($selectQuery);
+    }
+
 
 function select_table($select_table_sql, $table_id) {
-    global $pdo;
+    $pdo = $GLOBALS['pdo'];
     $id = 0;
     $id_found = false;
     $table = "<table id='$table_id' class='bwp-table display compact cell-border'>
@@ -74,7 +81,7 @@ function select_table($select_table_sql, $table_id) {
 
 
 function select_json($select_json){
-    global $pdo;
+    $pdo = $GLOBALS['pdo'];
     $encodable = array();
     $stmt = $pdo->prepare($select_json);
     $stmt->execute();
@@ -89,7 +96,7 @@ function select_json($select_json){
 }
 
 function get_tables($element, $option_val ){
-    global $pdo;
+    $pdo = $GLOBALS['pdo'];
     $sql = "SHOW TABLES";
     $db_tables = "";
     
@@ -108,7 +115,7 @@ function get_tables($element, $option_val ){
 
 
 function select_parm($dept){
-    global $pdo;
+    $pdo = $GLOBALS['pdo'];
     $stmt = $pdo->prepare('SELECT * FROM users WHERE dept =:dept ');
     $stmt->execute(['dept' => $dept]);
     $tables = "";
@@ -122,13 +129,13 @@ function select_parm($dept){
 }
 
 function select_class($name){
-    global $pdo;
+    $pdo = $GLOBALS['pdo'];
     $news = $pdo->query('SELECT * FROM users')->fetchAll(PDO::FETCH_CLASS, $name);
     print_r($name);
 }
 
 function select_array(){
-    global $pdo;
+    $pdo = $GLOBALS['pdo'];
     $data = $pdo->query('SELECT * FROM users')->fetchAll(PDO::FETCH_ASSOC);
     //print_r(var_export($data));
     $json = json_encode($data);  //JSON object
@@ -136,7 +143,7 @@ function select_array(){
 }
 
 function insert_users(){
-    global $pdo;
+    $pdo = $GLOBALS['pdo'];
     $data = array(1019, 'Fred', 'Neil', 'HR', 'Manager', 0);
     $sql = "INSERT INTO `users` (`id`, `first_name`, `last_name`, `dept`, `position`, `manager`, `start_date`)
      VALUES (?, ?, ?, ?, ?, ?, Now())";

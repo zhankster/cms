@@ -9,6 +9,7 @@ $css_lib = '<link href="css/site.css" rel="stylesheet">
 $js_lib ="<script src='js/customers.js'></script>";
 require('php/template.php');
 require('php/connect_db.php');
+
 //$table = select_table($sql, 'tblCustomers');
 
 $states = $GLOBALS['states'];
@@ -19,6 +20,8 @@ $states_provinces = array_merge($states, $provinces);
 asort($states_provinces);
 $sp_select_opt = "";
 $countries_select_opt = "";
+
+
 
 foreach ($states_provinces as $key => $value) {
     global $sp_select_opt;
@@ -31,11 +34,12 @@ foreach ($countries as $key => $value) {
 }
 
 if (isset($_POST["post_type"])) {
-  update_add_customer($_POST["post_type"]);
+   update_add_customer($_POST["post_type"]);
 }
 
+
 function update_add_customer($type){
-  $pdo = $GLOABLS['pdo'];
+  $pdo = createConn();
   if ($type=="add"){
 
       $sql = "INSERT INTO `customers`
@@ -86,8 +90,8 @@ function update_add_customer($type){
       `postal_code` = :postal_code,
       `country` = :country,
       `phone1` = :phone1,
-      `phone2` = phone2,
-      `fax` = fax,
+      `phone2` = :phone2,
+      `fax` = :fax,
       `email` = :email,
       `active` = :active,
       `last_update` = Now()
@@ -109,7 +113,15 @@ function update_add_customer($type){
   $stmt->bindParam(':phone2', $_POST['phone2'], PDO::PARAM_STR);       
   $stmt->bindParam(':fax', $_POST['fax'], PDO::PARAM_STR); 
   $stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR); 
-  $stmt->bindParam(':active', $_POST['active'], PDO::PARAM_STR); 
+  if ($_POST['active'] == "on") {
+    $stat = "1";
+  } else {
+    $stat = "0";
+  }
+  $stmt->bindParam(':active', $stat, PDO::PARAM_STR);
+  if ($type != "add"){
+    $stmt->bindParam(':id', $_POST['id_num'], PDO::PARAM_STR);
+  }
 
   $stmt->execute();
  
@@ -132,7 +144,7 @@ print_header($css_lib, '.bwp-customers');
 	<div class="container-fluid header">
 		<div class = "row">
             <div class="col-md-12">
-                <form>
+<form name="frmCustomer" id="frmCustomer" action="" method="post" onsubmit="return validateForm()">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="txtCompanyName">Company</label>
@@ -157,8 +169,8 @@ print_header($css_lib, '.bwp-customers');
   <div class="form-row">
      <div class="form-group col-md-3">
       <label for="selCountries">Country</label>
-      <select id="selCountries" class="form-control customer" name="countries">
-        <option selected val="NULL">Choose...</option>
+      <select id="selCountries" class="form-control customer" name="country" id="selCountry">
+        <option selected value="NULL">Choose...</option>
         <option value="NA">N/A</option>
         <?php echo $countries_select_opt; ?>
       </select>
@@ -170,7 +182,7 @@ print_header($css_lib, '.bwp-customers');
     <div class="form-group col-md-3">
       <label for="selState">State or Province</label>
       <select id="selState" class="form-control customer" name="state" >
-        <option selected val="NULL">Choose...</option>
+        <option selected value="NULL">Choose...</option>
         <option value="NA">N/A</option>
         <?php echo $sp_select_opt; ?>
       </select>
@@ -213,7 +225,7 @@ print_header($css_lib, '.bwp-customers');
   <button type="submit" class="btn btn-primary" id="custBtnSubmit">Add Customer</button>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <button type="button" class="btn btn-default" id="custBtnClear">Clear All</button>
-  <input type="hidden" value = "0" id="txtID" name="id" />
+  <input type="hidden" value = "0" id="txtID" name="id_num" />
   <input type="hidden" value = "add" id="txtPostType" name="post_type" />
 </form>
             </div>

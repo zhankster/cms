@@ -96,3 +96,13 @@ Stack trace:
 #0 C:\Dev\php\cms\cms\php\connect_db.php(7): select_json('select * from u...')
 #1 {main}
   thrown in C:\Dev\php\cms\cms\php\connect_db.php on line 78
+[19-Jun-2019 15:50:53 America/Chicago] PHP Notice:  Undefined variable: host in C:\Dev\php\cms\cms\php\connect_db.php on line 14
+[19-Jun-2019 15:50:53 America/Chicago] PHP Notice:  Undefined variable: db in C:\Dev\php\cms\cms\php\connect_db.php on line 14
+[19-Jun-2019 15:50:53 America/Chicago] PHP Notice:  Undefined variable: charset in C:\Dev\php\cms\cms\php\connect_db.php on line 14
+[19-Jun-2019 15:50:53 America/Chicago] PHP Notice:  Undefined variable: user in C:\Dev\php\cms\cms\php\connect_db.php on line 21
+[19-Jun-2019 15:50:53 America/Chicago] PHP Notice:  Undefined variable: pass in C:\Dev\php\cms\cms\php\connect_db.php on line 21
+[19-Jun-2019 15:50:53 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2019] Unknown character set in C:\Dev\php\cms\cms\php\connect_db.php:24
+Stack trace:
+#0 C:\Dev\php\cms\cms\php\connect_db.php(29): createConn()
+#1 {main}
+  thrown in C:\Dev\php\cms\cms\php\connect_db.php on line 24
